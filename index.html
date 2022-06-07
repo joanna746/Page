@@ -12,9 +12,9 @@
 <body>
     <container>
         <article class="container">
+            <div id="shadeAfterClick">
             <div class=" skill-image">
-                <img
-                    src="C:\projekty\zadanie\frontend-recruitment-task\images\sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg" />
+                <img src=".\images\sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg" />
             </div>
             <div class="content">
                 <div class="title" alt="text">
@@ -25,28 +25,24 @@
                         and
                         protection for modern and legacy infrastructures and SaaS platforms, managed via a single app
                         with
-                        no hardware required.</div>
-                </div>
-
-                <div class="button">
-                    <button class="btn" id="submit" >Submit</button>
+                        no hardware required.
+                    </div>
+                    <div class="button">
+                        <button class="btn" id="submit">Submit</button>
+                    </div>
                 </div>
             </div>
-        
-                <div class="popup" id="popup">
-                    <h2>Alert!</h2>
-                    <p>You have clicked X times to related button.</p>
-                    <button type="button" class="thispopup">Close</button>
-                    <button class="reset" id="reset">Reset</button>
-                    <div class="countNum">
-                    <h4 class="count" id="count">0</h4>
-                        </div>
-                    </div>
-                
-            
-                </article>
+        </div>
+            <div class="popup" id="popup">
+                <h2>Alert!</h2>
+                <p>You have clicked <b><span class="count" id="count"></b></span> <b>times</b> to related button.</p>
+                <button type="button" class="thispopup">X</button>
+            </div>
 
-       
+
+        </article>
+
+
     </container>
     <script src="src\js\main.js"></script>
     <script src="src\js\function.js"></script>

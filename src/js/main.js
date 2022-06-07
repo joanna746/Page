@@ -1,3 +1,4 @@
+const { triggerAsyncId } = require("async_hooks");
 
 
 const likeButton = document.querySelector('button');
@@ -5,6 +6,7 @@ console.log(likeButton);
 likeButton.addEventListener('click', function () {
 
     openPopup();
+    screenShade();
 
 
 });
@@ -13,6 +15,12 @@ function openPopup() {
     const popup = document.getElementById('popup');
     console.log(popup);
     popup.classList.add('open-popup');
+    
+}
+
+function screenShade() {
+    const container = document.getElementById('shadeAfterClick');
+    container.classList.add('shadeAfterClick');
 }
 
 
@@ -23,8 +31,10 @@ thispopup.addEventListener('click', function () {
 });
 function closePopup() {
     const thispopup = document.getElementById('thispopup');
+    const container = document.getElementById('shadeAfterClick');
     console.log(thispopup);
     popup.classList.remove('open-popup');
+    container.classList.remove('shadeAfterClick');
 };
 
 //Naliczanie na button
@@ -44,9 +54,17 @@ button1.addEventListener('click', function () {
     
 })
 function oneFunction() {
+    const a=document.getElementById('count');
+    console.log(a);
+    const aa=Number(a);
+    console.log(aa)
     
     countNum.innerHTML++;
     console.log(countNum)
+    if(countNum>=5){
+        console.log('dupa')
+        
+    }
     
 
 }

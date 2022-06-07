@@ -9,6 +9,11 @@
 
 }
 
+.shade {
+    background: #121212;
+    opacity: 0.3;
+}
+
 /* img-hero */
 .skill-image {
     position: absolute;
@@ -70,6 +75,7 @@
             font-weight: 300;
             font-size: 16px;
             line-height: 150%;
+            padding-block:  20px;
             /* or 24px */
 
 
@@ -81,25 +87,26 @@
 
     .button {
         display: inline;
+        position: absolute;
         flex-direction: row;
         align-items: flex-start;
-        padding: 16px 40px;
+        padding: 0;
         gap: 10px;
         @extend.btn;
 
         .btn {
-
+            position: relative;
             
             width: 128px;
             height: 48px;
-            left: 830px;
-            top: 338px;
+            
             
 
             /* Primary #1 */
 
             background: #E4C1AE;
             border-radius: 32px;
+            border-style: none;
         }
 
     }
@@ -114,9 +121,9 @@
     width: 920px;
     height: 210px;
     left: 260px;
-    top: 375px;
+    top: 42.5%;
 
-    background: #FFFFFF;
+    background: #ffffff;
     visibility:hidden ;
 
     h2 {
@@ -165,6 +172,37 @@
 .open-popup {
     @extend .popup;
     visibility: visible;
+    background: #ffffff;
+    border-style: none;
+    border-width: 2px;
+    box-shadow: -2px 4px 10px rgba(200, 124, 142, 0.49);
+    padding-inline: 50px;
+    button {
+        position: relative;
+        left: 102%;
+        top: -53%;
+        border-style: none;
+        background: none;
+        font-size: 20px;
+    }
+    h4 {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+        left: 50px;
+    }
 }
 
+.shadeAfterClick{
+    position: static;
+    width: 110%;
+    height: 100%;
+    opacity: 0.6;
+    filter: blur(1.5px); 
+    background: rgba(0, 0, 0, 0.15);
+    button{
+        opacity: 1;
+    }
+}
 
