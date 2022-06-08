@@ -1,4 +1,3 @@
-const { triggerAsyncId } = require("async_hooks");
 
 
 const likeButton = document.querySelector('button');
@@ -15,7 +14,6 @@ function openPopup() {
     const popup = document.getElementById('popup');
     console.log(popup);
     popup.classList.add('open-popup');
-    
 }
 
 function screenShade() {
@@ -31,7 +29,6 @@ thispopup.addEventListener('click', function () {
 });
 function closePopup() {
     const thispopup = document.getElementById('thispopup');
-    const container = document.getElementById('shadeAfterClick');
     console.log(thispopup);
     popup.classList.remove('open-popup');
     container.classList.remove('shadeAfterClick');
@@ -40,33 +37,40 @@ function closePopup() {
 //Naliczanie na button
 const button1 = document.querySelector('button');
 //console.log(button1)
-const countNum = document.querySelector('.count')
+const countNum = document.querySelector('.count');
 //console.log(countNum);
-const resetButton=document.querySelector('.reset')
-console.log(resetButton)
-
-
+const container = document.getElementById('shadeAfterClick');
+const resetButton = document.querySelector('.reset');
+//console.log(resetButton)
 
 
 button1.addEventListener('click', function () {
     
     oneFunction();
     
-})
-function oneFunction() {
-    const a=document.getElementById('count');
-    console.log(a);
-    const aa=Number(a);
-    console.log(aa)
-    
-    countNum.innerHTML++;
-    console.log(countNum)
-    if(countNum>=5){
-        console.log('dupa')
-        
-    }
-    
+});
 
+resetButton.addEventListener('click', function() {
+    countNum.innerHTML = 0;
+    resetButton.classList.remove('show');
+});
+
+container.addEventListener('click', function () {
+    console.log('Kliknięto poza obszar popup');
+    popup.classList.remove('open-popup');
+    container.classList.remove('shadeAfterClick');
+
+});
+
+function oneFunction() {
+    if(countNum.innerHTML < 4) {
+    countNum.innerHTML++;
+    } else {
+        countNum.innerHTML++;
+        console.log('reset?');
+        console.log(countNum.innerHTML);
+        resetButton.classList.add('show')
+    };
 }
 
 

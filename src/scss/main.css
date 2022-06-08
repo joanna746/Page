@@ -68,16 +68,22 @@
   color: #121212;
 }
 
-.content .button {
+.button {
   display: inline;
   position: absolute;
   flex-direction: row;
   align-items: flex-start;
   padding: 0;
   gap: 10px;
+  left: 830px;
+  top: 360px;
 }
 
-.content .button .btn, .content .button .button {
+.button :hover {
+  cursor: pointer;
+}
+
+.button .btn, .button .button {
   position: relative;
   width: 128px;
   height: 48px;
@@ -145,6 +151,19 @@
   font-size: 20px;
 }
 
+.open-popup .reset {
+  display: none;
+}
+
+.open-popup .show {
+  display: inline;
+  left: 92%;
+}
+
+.open-popup .thispopup:hover {
+  cursor: pointer;
+}
+
 .open-popup h4 {
   margin: 0;
 }
@@ -161,8 +180,4 @@
   opacity: 0.6;
   filter: blur(1.5px);
   background: rgba(0, 0, 0, 0.15);
-}
-
-.shadeAfterClick button {
-  opacity: 1;
 }
