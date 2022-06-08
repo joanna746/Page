@@ -75,7 +75,7 @@
             font-weight: 300;
             font-size: 16px;
             line-height: 150%;
-            padding-block:  20px;
+            padding-block: 20px;
             /* or 24px */
 
 
@@ -95,17 +95,20 @@
     gap: 10px;
     left: 830px;
     top: 360px;
-    :hover{
-    cursor: pointer;
+
+    :hover {
+        cursor: pointer;
     }
+
     @extend.btn;
+
     .btn {
         position: relative;
-        
+
         width: 128px;
         height: 48px;
-        
-        
+
+
 
         /* Primary #1 */
 
@@ -128,51 +131,53 @@
     top: 42.5%;
 
     background: #ffffff;
-    visibility:hidden ;
+    visibility: hidden;
 
     h2 {
         /* T1 */
-    
+
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
         font-size: 42px;
         line-height: 120%;
         /* or 50px */
-    
-    
+
+
         /* Dark #1 */
-    
+
         color: #121212;
     }
+
     p {
         /* copy */
-    
-    
+
+
         position: absolute;
         width: 380px;
         height: 24px;
         left: calc(50% - 380px/2 - 175px);
         top: calc(50% - 24px/2 + 37px);
-    
-    
-    
+
+
+
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
         line-height: 150%;
         /* identical to box height, or 24px */
-    
-    
+
+
         /* Dark #1 */
-    
+
         color: #121212;
-    
+
     }
-    
-    
+
+
 }
+
 .open-popup {
     @extend .popup;
     visibility: visible;
@@ -181,6 +186,7 @@
     border-width: 2px;
     box-shadow: -2px 4px 10px rgba(200, 124, 142, 0.49);
     padding-inline: 50px;
+
     button {
         position: relative;
         left: 102%;
@@ -190,33 +196,41 @@
         font-size: 20px;
     }
 
-    .reset{
+    .reset {
         display: none;
     }
 
-    .show{
+    .show {
         display: inline;
         left: 92%;
     }
 
-    .thispopup:hover{
+    .thispopup:hover {
         cursor: pointer;
     }
+
     h4 {
         margin: 0;
     }
+
     p {
         margin: 0;
         left: 50px;
     }
 }
 
-.shadeAfterClick{
+.shadeAfterClick {
     position: static;
     width: 110%;
     height: 100%;
     opacity: 0.6;
-    filter: blur(1.5px); 
+    filter: blur(1.5px);
     background: rgba(0, 0, 0, 0.15);
 }
 
+/*Media*/
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
